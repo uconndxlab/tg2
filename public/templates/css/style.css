@@ -1,0 +1,11 @@
+body {
+    background:url(https://ct-turfgrass-management.web.app/img/background.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+#mainView {
+    background-color:#fff;
+    padding:15px;
+}

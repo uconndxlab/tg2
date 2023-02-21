@@ -1,0 +1,336 @@
+<!-- New report Form -->
+<!-- Path: public\templates\parts\new-report.html -->
+<div class = "container-fluid my-4">
+    <div class="row">
+        <div class="col-12"><h2>Add or Edit Report</h2></div>
+    </div>
+</div>
+<form>
+<!-- generate a form to start a new report, multistep in accordions. required date, name of evaluator, name of the field, address, multiple sports?(radio), sports played (checkboxes for baseball, soccer, track, softball, lacross, rugby, football, field hockey, other) -->
+<!-- 1. Date -->
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        1. Report Information
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control" id="date" aria-describedby="dateHelp">
+          <div id="dateHelp" class="form-text">Date of the evaluation.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="evaluator" class="form-label">Evaluator</label>
+            <input type="text" class="form-control" id="evaluator" aria-describedby="evaluatorHelp">
+            <div id="evaluatorHelp" class="form-text">Name of the evaluator.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 3. Field -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            2. Field Information
+        </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="mb-3">
+                    <label for="field" class="form-label">Field Name</label>
+                    <input type="text" class="form-control" id="field" aria-describedby="fieldHelp">
+                    <div id="fieldHelp" class="form-text">Name of the field.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" aria-describedby="addressHelp">
+                    <div id="addressHelp" class="form-text">Address of the field.</div>
+                </div>
+                <!-- Is the Field used for multiple sports? Yes no -->
+                <div class="container-fluid">
+
+                    <div class="row mb-4">
+                        <div class="col">
+                            <input id="multiple-sports" class="form-check-input ml-2" type="checkbox" name="is_for_multiple_sports">
+                            <label for="multiple-sports" class="form-check-label">
+                            Is this field used for multiple sports?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                    <div class="container-fluid">
+                        <!-- checkboxes for sports played -->
+                        <div class="row">
+                            <div class="col-12"> <h5>Sports played:</h5> </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Baseball">
+                                <label class="form-check-label">Baseball</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Softball">
+                                <label class="form-check-label">Softball</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Soccer">
+                                <label class="form-check-label">Soccer</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Track & Field">
+                                <label class="form-check-label">Track & Field</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Lacrosse">
+                                <label class="form-check-label">Lacrosse</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Rugby">
+                                <label class="form-check-label">Rugby</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Football">
+                                <label class="form-check-label">Football</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Field Hockey">
+                                <label class="form-check-label">Field Hockey</label>
+                                </div>
+                                <div class="form-check col">
+                                <input class="form-check-input" type="checkbox" name="sports_played[]" value="Other">
+                                <label class="form-check-label">Other</label>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. General Info -->
+        <!-- Tufgrass Species Present and percentage of each: kentucky bluegrass, tall fescue, perennial rye, fine leaf fescue, other -->
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                3. General Information
+            </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="mb-3">
+                        <fieldset>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12"><legend>Turfgrass Species Present</legend></div>
+
+                                    <div class="col-md-6">
+                                        <label for="turfgrassPresent-kybluegrass" class="form-label">Kentucky Bluegrass (percent coverage)</label>
+                                        <input type="number" class="form-control" id="turfgrassPresent-kybluegrass" aria-describedby="turfgrassPresent-kybluegrassHelp">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="turfgrassPresent-tallfescue" class="form-label">Tall Fescue (percent coverage)</label>
+                                        <input type="number" class="form-control" id="turfgrassPresent-tallfescue" aria-describedby="turfgrassPresent-tallfescueHelp">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="turfgrassPresent-perennialrye" class="form-label">Perennial Rye (percent coverage)</label>
+                                        <input type="number" class="form-control" id="turfgrassPresent-perennialrye" aria-describedby="turfgrassPresent-perennialryeHelp">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="turfgrassPresent-fineleaffescue" class="form-label">Fine Leaf Fescue (percent coverage)</label>
+                                        <input type="number" class="form-control" id="turfgrassPresent-fineleaffescue" aria-describedby="turfgrassPresent-perennialryeHelp">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="turfgrassPresent-other" class="form-label">Other (percent coverage)</label>
+                                        <input type="number" class="form-control" id="turfgrassPresent-other" aria-describedby="turfgrassPresent-otherHelp">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="turfgrassPresent-comments">
+                                            Comments
+                                        </label>
+                                        <textarea style="width:100%;" placeholder="Comments" id="turfgrassPresent-comments" class="d-block" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <legend>Field Establishment</legend>
+                                    </div>
+                                    <div class="col">
+                                        <label for="fieldEstablishment-age" class="form-label">Age</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-year" aria-describedby="fieldEstablishment-yearHelp">
+                                    </div>
+                                    <div class="col">
+                                        <label for="fieldEstablishment-month" class="form-label">Sun</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-Sun" aria-describedby="fieldEstablishment-monthHelp">
+                                    </div>
+                                    <div class="col">
+                                        <label for="fieldEstablishment-day" class="form-label">Seed</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-Seed" aria-describedby="fieldEstablishment-dayHelp">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="fieldEstablishment-day" class="form-label">Shade</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-Shade" aria-describedby="fieldEstablishment-dayHelp">
+                                    </div>
+
+                                    
+                                    <div class="col">
+                                        <label for="fieldEstablishment-day" class="form-label">Sod</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-Sod" aria-describedby="fieldEstablishment-dayHelp">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="fieldEstablishment-day" class="form-label">% Shade</label>
+                                        <input type="number" class="form-control" id="fieldEstablishment-percentShade" aria-describedby="fieldEstablishment-dayHelp">
+                                    </div>
+
+                                    <div class="col-12 ">
+                                        <label for="fieldEstablishment-comments">
+                                            Comments
+                                        </label>
+                                        <textarea style="width:100%;" placeholder="Comments" id="fieldEstablishment-comments" class="d-block" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <legend>Renovation History</legend>
+                                    </div>
+                                    <div class="col">
+                                        <label for="renovationHistory-percentRenovated" class="form-label">% Renovated</label>
+                                        <input type="number" class="form-control" id="renovationHistory-percentRenovated">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="renovationHistory-dateOfRenovation" class="form-label">Sun</label>
+                                        <input type="date" class="form-control" id="renovationHistory-dateOfRenovation">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="renovationHistory-typeOfRenovation" class="form-label">Sun</label>
+                                        <input type="date" class="form-control" id="renovationHistory-typeOfRenovation">
+                                    </div>
+                                    
+
+                                    <div class="col-12 ">
+                                        <label for="renovationHistory-comments">
+                                            Comments
+                                        </label>
+                                        <textarea style="width:100%;" placeholder="Comments" id="renovationHistory-comments" class="d-block" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Color. Radio buttons for Dark Green, Light Green, Medium Green, Yellow Green, Med/Light Green, Turf Dorman (TD)-->
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!--Radio-->
+                                    <div class="col-12">
+                                        <legend>Color</legend>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-darkgreen" value="darkgreen">
+                                        <label for="color-darkgreen">Dark Green</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-lightgreen" value="lightgreen">
+                                        <label for="color-lightgreen">Light Green</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-mediumgreen" value="mediumgreen">
+                                        <label for="color-mediumgreen">Medium Green</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-mediumlightgreen" value="mediumLightgreen">
+                                        <label for="color-mediumlightgreen">Med/Light Green</label>
+                                    </div>
+
+                                    
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-yellowgreen" value="yellowgreen">
+                                        <label for="color-yellowgreen">Yellow Green</label>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                        <input class="form-check-input" type="radio" name="color" id="color-turfdormant" value="turfdormant">
+                                        <label for="color-turfdormant">Turf Dormant</label>
+                                    </div>
+
+                                    
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <legend>Soil</legend>
+                                    </div>
+                                    <div class="col">
+                                        <label for="soil-texture" class="form-label">Texture</label>
+                                        <input type="number" class="form-control" id="soil-texture">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="soil-depth" class="form-label">Depth</label>
+                                        <input type="number" class="form-control" id="soil-texture">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="soil-condition" class="form-label">Condition</label>
+                                        <input type="text" class="form-control" id="soil-condition">
+                                    </div>
+                                    
+
+                                    <div class="col-12 ">
+                                        <label for="soil-comments">
+                                            Comments
+                                        </label>
+                                        <textarea style="width:100%;" placeholder="Comments" id="soil-comments" class="d-block" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+
+    
+
+</form>
