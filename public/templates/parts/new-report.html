@@ -33,7 +33,7 @@
     </div>
   </div>
 
-<!-- 3. Field -->
+    <!-- 2. Field -->
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -326,11 +326,334 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- 4. Quality Checklist -->
+
+        <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    4. Quality Checklist
+                </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <legend>Turf Rating Codes</legend>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>% Turf Cover</td>
+                                                    <td>
+                                                        <select id="turfDensity">
+                                                            <option value="1">1 = 0-10</option>
+                                                            <option value="2">2 = 11-20</option>
+                                                            <option value="3">7 = 21-30</option>
+                                                            <option value="4">6 = 31-40</option>
+                                                            <option value="5">5 = 41-50</option>
+                                                            <option value="6">6 = 51-60</option>
+                                                            <option value="7">7 = 61-70</option>
+                                                            <option value="8">8 = 71-80</option>
+                                                            <option value="9">9 = 81-90</option>
+                                                            <option value="10">10 = 91-100</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Smoothness</td>
+                                                    <td>
+                                                        <select id="smoothness">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Turf Rating</td>
+                                                    <td>
+                                                        <!-- Text Input for Turf Rating-->
+                                                        <input type="text" class="form-control" id="turfRating">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <legend>Surface Rating Codes</legend>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Stones at the Surface</td>
+                                                    <td>
+                                                        <select id="stonesAtSurface">
+                                                            <option value="0">0 = None</option>
+                                                            <option value="1">1 = Few</option>
+                                                            <option value="2">2 = Many</option>
+                                                          </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Percent of Weeds</td>
+                                                    <td>
+                                                        <select id="weedsPercentage">
+                                                            <option value="0">0 = 0-10%</option>
+                                                            <option value="1">1 = 11-20%</option>
+                                                            <option value="2">2 = 21-30%</option>
+                                                            <option value="3">3 = 31-40%</option>
+                                                            <option value="4">4 = 41-100%</option>
+                                                          </select>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Depressions</td>
+                                                    <td>
+                                                        <select id="depressions">
+                                                            <option value="0">0 = None</option>
+                                                            <option value="1">1 = Few</option>
+                                                            <option value="2">2 = Moderate</option>
+                                                            <option value="3">3 = Many</option>
+                                                            <option value="4">4 = Extreme</option>
+                                                          </select>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Surface Rating (Stones+Weeds+Depression)</td>
+                                                    <td>
+                                                        <!-- Text Input for Surface Rating-->
+                                                        <input type="text" class="form-control" id="surfaceRating">
+                                                    </td>
+
+                                                <tr>
+                                                    <td>Turf Rating</td>
+                                                    <td>
+                                                        <!-- Text Input for Turf Rating-->
+                                                        <input type="text" class="form-control" id="turfRating">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="alert alert-success">
+                                            <p>Overall Rating = Turf Rating + Surface Rating</p>
+                                            <h2>[RATING CODE]</h2>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-    </div>
 
+                            </div>
+                        </fieldset>
+                        <fieldset class="mt-4">
+                            <div class="container-fluid">
 
-    
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <legend>Field Use</legend>
+                                    </div>
+                                </div>
 
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>%Wear Damage</td>
+                                                    <td>
+                                                        <select id="wearDamage">
+                                                            <option value="slight">Slight</option>
+                                                            <option value="moderate">Moderate</option>
+                                                            <option value="heavy">Heavy</option>
+                                                          </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Traffic Events/Week</td>
+                                                    <td>
+                                                        <select id="eventsPerWeek">
+                                                            <option value="0-2">0-2 Games</option>
+                                                            <option value="3-5">3-5 Games</option>
+                                                            <option value="6">&gt; 6 Games</option>
+                                                          </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Multiple Sports Usage?</td>
+                                                    <td>
+                                                        <!-- Text Input for Turf Rating-->
+                                                        <span class="badge bg-primary">value provided elsewhere</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sports Played:</td>
+                                                    <td>
+                                                        <!-- Text Input for Turf Rating-->
+                                                        <span class="badge bg-primary">value provided elsewhere</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </div>        
+            </div>
+            <!--
+                5. Nutrient Management
+            -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" 
+                    aria-expanded="false" aria-controls="collapseSix">
+                        5. Fertility/Nutrient Management
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="container-fluid">
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <legend>Nutrients</legend>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Add New Product</h5>
+                                              <form>
+                                                <div class="row mb-3">
+                                                  <div class="col-md-6">
+                                                    <label for="productName" class="form-label">Product Name</label>
+                                                    <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="applicationDate" class="form-label">Date of Application</label>
+                                                    <input type="date" class="form-control" id="applicationDate">
+                                                  </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                  <div class="col-md-6">
+                                                    <label for="applicationRate" class="form-label">Application Rate</label>
+                                                    <input type="text" class="form-control" id="applicationRate" placeholder="Enter application rate">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="applicationLocation" class="form-label">Location of Application</label>
+                                                    <select class="form-select" id="applicationLocation">
+                                                      <option value="all-of-field">All of Field</option>
+                                                      <option value="part-of-field">Part of Field</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                  <div class="col-md-6">
+                                                    <label for="location" class="form-label">Location</label>
+                                                    <input type="text" class="form-control" id="location" placeholder="Enter location">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="npkAnalysis" class="form-label">NPK Analysis</label>
+                                                    <input type="text" class="form-control" id="npkAnalysis" placeholder="Enter NPK analysis">
+                                                  </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                  <div class="col-md-6">
+                                                    <label for="compostAnalysis" class="form-label">Compost Analysis</label>
+                                                    <input type="text" class="form-control" id="compostAnalysis" placeholder="Enter compost analysis">
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <label for="biostimulant" class="form-label">Biostimulant</label>
+                                                    <select class="form-select" id="biostimulant">
+                                                      <option value="yes">Yes</option>
+                                                      <option value="no">No</option>
+                                                    </select>
+                                                  </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                  <div class="col-md-6">
+                                                    <label for="type" class="form-label">Type</label>
+                                                    <input type="text" class="form-control" id="type" placeholder="Enter type">
+                                                  </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Add</button>
+                                              </form>
+                                            </div>
+                                          </div>
+                                          
+                                          
+                                    </div>
+                                    </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Scotts Turfbuilder</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Date Added: 2 Feb 2022</h6>
+                                            </div>
+                                            <ul class="list-group list-group-flush">                                          
+                                                <li class="list-group-item"><strong>Application Rate:</strong> <br>1.5 lbs/1000 sq ft</li>
+                                                <li class="list-group-item"><strong>Location:</strong> <br>All of Field</li>
+                                                <li class="list-group-item"><strong>NPK Analysis:</strong> <br>10-0-0</li>
+                                                <li class="list-group-item"><strong>Compost Analysis:</strong> <br>0-0-0</li>
+                                                <li class="list-group-item"><strong>Biostimulant:</strong> <br>Yes</li>
+                                                <li class="list-group-item"><strong>Type</strong> <br>microbial</li>
+                                            </ul>
+                                            <div class="card-body">
+                                                <a href="#" class="btn btn-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Scotts Turfbuilder</h5>
+                                                <h6 class="card-subtitle mb-2 text-muted">Date Added: 2 Feb 2022</h6>
+                                            </div>
+                                            <ul class="list-group list-group-flush">                                          
+                                                <li class="list-group-item"><strong>Application Rate:</strong> <br>1.5 lbs/1000 sq ft</li>
+                                                <li class="list-group-item"><strong>Location:</strong> <br>All of Field</li>
+                                                <li class="list-group-item"><strong>NPK Analysis:</strong> <br>10-0-0</li>
+                                                <li class="list-group-item"><strong>Compost Analysis:</strong> <br>0-0-0</li>
+                                                <li class="list-group-item"><strong>Biostimulant:</strong> <br>Yes</li>
+                                                <li class="list-group-item"><strong>Type</strong> <br>microbial</li>
+                                            </ul>
+                                            <div class="card-body">
+                                                <a href="#" class="btn btn-danger">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
 </form>
