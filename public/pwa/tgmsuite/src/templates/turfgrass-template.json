@@ -16,6 +16,51 @@
                         {
                             "id":0,
                             "name":"Field 1"
+                        },
+
+                        {
+                            "id":1,
+                            "name":"Field 2"
+                        },
+
+                        {
+                            "id":2,
+                            "name":"Field 3"
+                        },
+
+                        {
+                            "id":3,
+                            "name":"Field 4"
+                        },
+
+                        {
+                            "id":4,
+                            "name":"Field 5"
+                        },
+
+                        {
+                            "id":5,
+                            "name":"Field 6"
+                        },
+
+                        {
+                            "id":6,
+                            "name":"Field 7"
+                        },
+
+                        {
+                            "id":7,
+                            "name":"Field 8"
+                        },
+
+                        {
+                            "id":8,
+                            "name":"Field 9"
+                        },
+
+                        {
+                            "id":9,
+                            "name":"Field 10"
                         }
                     ]
                 },
@@ -396,7 +441,325 @@
                     ]
                 }
             ]
+        },
+
+        {
+            "name":"Mowing Practices",
+            "questions":[
+                {
+                    "name":"Mowing Frequency",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 1,
+                            "name": "1x per week"
+                        },
+                        {
+                            "id": 2,
+                            "name": "2x per week"
+                        },
+                        {
+                            "id": 3,
+                            "name": "3x+ Times Per Week"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Height",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "< 1 Inch"
+                        },
+                        {
+                            "id": 1,
+                            "name": "1-2 Inches"
+                        },
+                        {
+                            "id": 2,
+                            "name": "2.25-3 Inches"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Higher Than 3 Inches"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Mowing Method",
+                    "type": "select",
+                    "options":[
+
+                        {
+                            "id": 1,
+                            "name": "Reel"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Rotary"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Other"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Are Clippings Collected?",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "No"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Yes"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"If clippings are collected, why?",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "Weed Seed Presence"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Disease Presence"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Too Much Growth"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Other"
+                        }
+                    ],
+                    "multiple": true
+                }
+            ]
+        },
+
+        {
+            
+            "name":"Irrigation",
+            "questions":[
+                {
+                    "name":"Irrigation System",
+                    "type": "radio",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "Yes"
+                        },
+                        {
+                            "id": 1,
+                            "name": "No"
+                        }
+                    ]
+                },
+                {
+                    "name":"Irrigation Frequency",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "None"
+                        },
+                        {
+                            "id": 1,
+                            "name": "1-2 Times Per Week"
+                        },
+                        {
+                            "id": 2,
+                            "name": "3-4 Times Per Week"
+                        },
+                        {
+                            "id": 3,
+                            "name": "5+ Times Per Week"
+                        }
+                    ]
+                },
+                {
+                    "name":"Irrigation Rate",
+                    "type": "text"
+                },
+
+                {
+                    "name":"Water Source",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "City/Municipal Source"
+                        },
+                        {
+                            "id": 1,
+                            "name": "Well"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Nearby Water Body"
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "name":"Cultivation",
+            "questions": [
+
+                {
+                    "name":"Cultivation Frequency",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 0,
+                            "name": "0 Times Per Year"
+                        },
+                        {
+                            "id": 1,
+                            "name": "1-2 Times Per Year"
+                        },
+                        {
+                            "id": 2,
+                            "name": "3-4 Times Per Year"
+                        },
+                        {
+                            "id": 3,
+                            "name": "5+ Times Per Year"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Cultivation Method",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 1,
+                            "name": "Hollow"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Solid"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Slice"
+                        },
+                        {
+                            "id": 4,
+                            "name": "Other"
+                        }
+                    ]
+                }
+
+
+            ]
+        },
+
+        {
+            "name":"Topdressing",
+            "questions": [
+                {
+                    "name":"Material Composition",
+                    "type": "multiple",
+                    "options":[
+                        {
+                            "id": 1,
+                            "name": "None"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Sand"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Compost"
+                        },
+
+                        {
+                            "id": 4,
+                            "name": "Combination"
+                        },
+
+                        {
+                            "id": 5,
+                            "name": "Other"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Topdressing Frequency",
+                    "type": "text"
+                },
+
+                {
+                    "name":"Topdressing Rate",
+                    "type": "text"
+                }
+            ]
+        },
+
+        {
+            "name":"Overseeding",
+            "questions": [
+                {
+                    "name":"Overseeding Frequency",
+                    "type": "text"
+                },
+
+                {
+                    "name":"Overseeding Rate",
+                    "type": "text"
+                },
+                
+                {
+                    "name":"Overseeding Species",
+                    "type": "text"
+                },
+
+                {
+                    "name":"Overseeding Method",
+                    "type": "select",
+                    "options":[
+                        {
+                            "id": 1,
+                            "name": "Broadcast"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Hand"
+                        },
+                        {
+                            "id": 3,
+                            "name": "Other"
+                        }
+                    ]
+                },
+
+                {
+                    "name":"Overseeding Date",
+                    "type": "date"
+                },
+
+                {
+                    "name":"Pre-germ?",
+                    "type": "text"
+                }
+            ]
         }
-    
     ]
 }
